@@ -26,7 +26,7 @@ const output = await dbConn.callProcedurePromisified(sp,[req.data.input.EMPLOYEE
   }),
   this.on("GET", "BPTypeSet",  async (req) => {
     var out = await extlib.fetchNorthWindData();
-    console.log(out);
+   
       // out.forEach(elm=>delete elm.$metadata );
     return out
     //return datares;
