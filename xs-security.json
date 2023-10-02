@@ -1,0 +1,16 @@
+{
+    "xsappname":"CAPMProject",
+    "scopes": [ {
+        "name": "$XSAPPNAME.AddressAuth",
+        "description": "AddressAuth"
+      }],
+    "attributes": [],
+    "role-templates": [   {
+        "name": "AddressAuth",
+        "description": "generated",
+        "scope-references": [
+          "$XSAPPNAME.AddressAuth"
+        ],
+        "attribute-references": []
+      }]
+}

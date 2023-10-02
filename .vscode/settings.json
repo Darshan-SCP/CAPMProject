@@ -1,0 +1,9 @@
+{
+    "SAP HANA Project Explorer.bind.confirm automatic undeployment": false,
+    "cds.trace.components": [
+        {
+            "name": "*",
+            "level": "verbose"
+        }
+    ]
+}
