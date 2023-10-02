@@ -7,9 +7,7 @@ entity EMPLOYEE
     EMPLOYEE_LASTNAME : String(30);
     COUNTRY : String(30);
     EMAIL : String(50);
-}
-
-entity ADDRESS
+}entity ADDRESS
 {
     key EMPLOYEE_ID : Integer64;
     EMPLOYEE_CITY : String(30);
