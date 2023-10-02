@@ -1,6 +1,0 @@
-COLUMN TABLE CAPMProject_BPTypeSet (
-  Spras NVARCHAR(2) NOT NULL,
-  Bpkind NVARCHAR(4) NOT NULL,
-  Text40 NVARCHAR(40) NOT NULL,
-  PRIMARY KEY(Spras, Bpkind)
-)
