@@ -9,7 +9,7 @@ build-parameters:
     - builder: custom
       commands:
         - npm install
-        - npx cds build
+        - npx cds build --production
 modules:
   - name: CAPMProject-srv
     type: nodejs
