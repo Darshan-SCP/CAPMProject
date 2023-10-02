@@ -32,11 +32,11 @@ stages:
 #      - alias: 'mySystemAlias'
 #        credentialId: 'mySystemCredentialsId'
 
-#  Release:
-#    cfTargets:
-#      - org: 'myOrg'
-#        space: 'mySpace'
-#        apiEndpoint: 'https://'
-#        appName: 'myAppName'
-#        manifest: 'manifest.yml'
-#        credentialsId: 'myDeploymentCredentialsId'
+ Release:
+   cfTargets:
+     - org: '91a87d1ctrial'
+       space: 'dev'
+       apiEndpoint: 'https://api.cf.us10-001.hana.ondemand.com'
+       appName: 'CAPMProject'
+       manifest: 'manifest.yml'
+       credentialsId: 'devscred'
