@@ -1,0 +1,5 @@
+VIEW EmployeeService_BPType AS SELECT
+  BPType_0.Spras,
+  BPType_0.Bpkind,
+  BPType_0.Text40
+FROM CAPMProject_BPType AS BPType_0

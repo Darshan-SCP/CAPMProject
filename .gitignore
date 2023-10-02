@@ -5,14 +5,15 @@ _out
 connection.properties
 default-*.json
 .cdsrc-private.json
-gen/
+
 *.vscode/
-node_modules/
+*node_modules*/
+*.node_modules/
 target/
 #73c452285e9bc727e4a29fd6990bb553a18f605816138cd8cd3c9d1c6730d944 git webhook secrate for cicd
 # Web IDE, App Studio
 .che/
-.gen/
+*node_modules/
 
 # MTA
 *_mta_build_tmp
