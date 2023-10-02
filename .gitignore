@@ -5,7 +5,7 @@ _out
 connection.properties
 default-*.json
 .cdsrc-private.json
-
+.gen/
 *.vscode/
 *node_modules*/
 *.node_modules/
@@ -14,7 +14,9 @@ target/
 # Web IDE, App Studio
 .che/
 *node_modules/
-
+.gen/
+gen
+*.gen/
 # MTA
 *_mta_build_tmp
 *.mtar
