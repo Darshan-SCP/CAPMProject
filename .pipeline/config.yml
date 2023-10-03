@@ -19,7 +19,7 @@ stages:
     cfSpace: "dev"
     cfAppName: "CAPMProject"
     cfCredentialsId: "devscred"
-    tmsUpload: false
+    tmsUpload: true
 steps:
   artifactPrepareVersion:
     versioningType: "cloud_noTag"
@@ -27,3 +27,6 @@ steps:
     failOnError: true
   cloudFoundryDeploy:
     mtaDeployParameters: "-f --version-rule ALL"
+  tmsUpload:
+    nodename: "Quality_Account"
+    credentialsId: "tms-sk"
