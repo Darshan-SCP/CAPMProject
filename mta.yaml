@@ -17,6 +17,7 @@ modules:
     parameters:
       buildpack: nodejs_buildpack
       memory: 500M
+      disk-quota: 500M
     build-parameters:
       builder: npm
     provides:
@@ -33,6 +34,7 @@ modules:
     parameters:
       buildpack: nodejs_buildpack
       memory: 500M
+      disk-quota: 500M
     requires:
       - name: CAPMProject-db
 resources:
