@@ -6,7 +6,7 @@ service EmployeeService @(path: '/EmpSrv') @(requires: 'authenticated-user') {
         grant: ['*'],
         to   : ['AddressAuth']
     }]) as projection on CAPMProject.EMPLOYEE;
-        entity Employee1 as projection on CAPMProject.EMPLOYEE;
+ entity Employee1 as projection on CAPMProject.EMPLOYEE;
 
     entity ADDRESS @(restrict: [{
         grant: ['*'],
