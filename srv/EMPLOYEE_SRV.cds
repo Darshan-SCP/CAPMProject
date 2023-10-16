@@ -1,6 +1,6 @@
 using CAPMProject from '../db/EMPLOYEE';
 
-service EmployeeService @(path: '/EmpSrv') @(requires: 'authenticated-user') {
+service EmployeeService @(path: '/EmpSrv')/* @(requires: 'authenticated-user') */{
 
     entity Employee @(restrict: [{
         grant: ['*'],
