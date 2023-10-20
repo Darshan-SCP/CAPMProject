@@ -24,13 +24,22 @@ module.exports = cds.service.impl(function () {
             path: '/$batch',
             headers: { 'Content-Type': 'multipart/mixed;boundary=batch'},
             data:  '--batch\r\n'+
+            '\r\n'+
+            'Content-Type: multipart/mixed; boundary=changeset\r\n'+
+            '\r\n'+
+            '--changeset\r\n'+
             'Content-Type: application/http\r\n'+
             'Content-Transfer-Encoding: binary\r\n'+
             '\r\n'+
-            'GET GetCitySet HTTP/1.1\r\n'+
+            'POST GetCitySet HTTP/1.1\r\n'+
+            'Content-Type: application/json\r\n'+
             '\r\n'+
+            '{ "Land1": "BD","Landx": "Bangladesh","Regio": "","Bezer": "","Cityc": "0126","Bezei": "DHAKA"}\r\n'+
+            '\r\n'+
+            '--changeset--\r\n'+
             '\r\n'+
             '--batch--', });
+
         return oImportedCaseDetails;
 
     });
