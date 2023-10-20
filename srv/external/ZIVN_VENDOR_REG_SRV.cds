@@ -6,7 +6,7 @@ service ZIVN_VENDOR_REG_SRV {};
 
 @cds.external : true
 @cds.persistence.skip : true
-@sap.creatable : 'false'
+@sap.creatable : 'true'
 @sap.updatable : 'false'
 @sap.deletable : 'false'
 @sap.pageable : 'false'
@@ -14,21 +14,21 @@ service ZIVN_VENDOR_REG_SRV {};
 entity ZIVN_VENDOR_REG_SRV.GetCitySet {
   @sap.unicode : 'false'
   @sap.label : 'Country'
-  @sap.creatable : 'false'
+  @sap.creatable : 'true'
   @sap.updatable : 'false'
   @sap.sortable : 'false'
   @sap.filterable : 'false'
   key Land1 : String(3) not null;
   @sap.unicode : 'false'
   @sap.label : 'Region'
-  @sap.creatable : 'false'
+  @sap.creatable : 'true'
   @sap.updatable : 'false'
   @sap.sortable : 'false'
   @sap.filterable : 'false'
   key Regio : String(3) not null;
   @sap.unicode : 'false'
   @sap.label : 'Name'
-  @sap.creatable : 'false'
+  @sap.creatable : 'true'
   @sap.updatable : 'false'
   @sap.sortable : 'false'
   @sap.filterable : 'false'
@@ -42,14 +42,14 @@ entity ZIVN_VENDOR_REG_SRV.GetCitySet {
   Bezer : String(20) not null;
   @sap.unicode : 'false'
   @sap.label : 'City code'
-  @sap.creatable : 'false'
+  @sap.creatable : 'true'
   @sap.updatable : 'false'
   @sap.sortable : 'false'
   @sap.filterable : 'false'
   Cityc : String(4) not null;
   @sap.unicode : 'false'
   @sap.label : 'Description'
-  @sap.creatable : 'false'
+  @sap.creatable : 'true'
   @sap.updatable : 'false'
   @sap.sortable : 'false'
   @sap.filterable : 'false'

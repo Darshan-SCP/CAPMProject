@@ -1,16 +1,30 @@
 {
-    "xsappname":"CAPMProject",
-    "scopes": [ {
-        "name": "$XSAPPNAME.AddressAuth",
-        "description": "AddressAuth"
-      }],
-    "attributes": [],
-    "role-templates": [   {
-        "name": "AddressAuth",
-        "description": "generated",
-        "scope-references": [
-          "$XSAPPNAME.AddressAuth"
-        ],
-        "attribute-references": []
-      }]
+  "xsappname": "CAPMProject",
+  "tenant-mode": "dedicated",
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.AddressAuth",
+      "description": "AddressAuth"
+    }
+  ],
+  "attributes": [],
+  "role-templates": [
+    {
+      "name": "AddressAuth",
+      "description": "generated",
+      "scope-references": [
+        "$XSAPPNAME.AddressAuth"
+      ],
+      "attribute-references": []
+    }
+  ],
+  "oauth2-configuration":{
+    "credenatial-types": [
+      "binding-secret"
+    ]
+  },
+  "redirect-uris": [
+    "https://*cfapps.us10-001.hana.ondemand.com/login/callback*",
+    "http://localhost:5000/*"
+  ]
 }
