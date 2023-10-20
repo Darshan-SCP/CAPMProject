@@ -21,7 +21,8 @@ gen
 *_mta_build_tmp
 *.mtar
 mta_archives/
-
+#    "csrf": true,
+#         "csrfInBatch": true,
 # Other
 .DS_Store
 *.orig

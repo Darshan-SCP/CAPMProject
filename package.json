@@ -26,11 +26,11 @@
       "ZIVN_VENDOR_REG_SRV": {
         "kind": "odata-v2",
         "model": "srv/external/ZIVN_VENDOR_REG_SRV",
-        "csrf": true,
-        "csrfInBatch": true,
         "credentials": {
           "destination": "A17",
-          "path": "sap/opu/odata/sap/ZIVN_VENDOR_REG_SRV"
+          "path": "sap/opu/odata/sap/ZIVN_VENDOR_REG_SRV",
+          "forwardAuthToken": true,
+          "timeout": 100000
         }
       },
       "EMAILAPP": {

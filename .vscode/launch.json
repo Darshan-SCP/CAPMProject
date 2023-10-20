@@ -20,7 +20,7 @@
       ]
     },
     {
-      "name": "Run CAPMProject-1",
+      "name": "Run CAPMProject",
       "request": "launch",
       "type": "node",
       "cwd": "${workspaceFolder}",
@@ -34,7 +34,7 @@
       "skipFiles": [
         "<node_internals>/**"
       ],
-      "envFile": "${workspaceFolder}/.env1",
+      "envFile": "${workspaceFolder}/defualt-env.json",
       "env": {
         "NODE_ENV": "development",
         "run.config": "{\"handlerId\":\"cap_run_config_handler_id\",\"runnableId\":\"{\\\"projectPath\\\":\\\"/home/user/projects/CAPMProject\\\",\\\"profileName\\\":\\\"development\\\"}\"}"
