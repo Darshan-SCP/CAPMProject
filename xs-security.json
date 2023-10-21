@@ -1,6 +1,5 @@
 {
   "xsappname": "CAPMProject",
-  "tenant-mode": "dedicated",
   "scopes": [
     {
       "name": "$XSAPPNAME.AddressAuth",
@@ -17,14 +16,5 @@
       ],
       "attribute-references": []
     }
-  ],
-  "oauth2-configuration":{
-    "credenatial-types": [
-      "binding-secret"
-    ]
-  },
-  "redirect-uris": [
-    "https://*cfapps.us10-001.hana.ondemand.com/login/callback*",
-    "http://localhost:5000/*"
   ]
 }
