@@ -28,6 +28,7 @@ modules:
       - name: CAPMProject-db
       - name: CAPMProject-destination
       - name: CAPMProject-auth
+      - name: CAPMProject-connectivity
   - name: CAPMProject-db-deployer
     type: hdb
     path: gen/db
@@ -57,3 +58,8 @@ resources:
       config:
         xsappname: 'CAPMProject-${org}-${space}'
         tenant-mode: dedicated
+  - name: CAPMProject-connectivity
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: connectivity
+      service-plan: lite
