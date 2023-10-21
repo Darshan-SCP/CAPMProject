@@ -8,6 +8,7 @@
   "dependencies": {
     "@sap-cloud-sdk/http-client": "^3.3.0",
     "@sap-cloud-sdk/resilience": "^3.3.0",
+    "@sap-cloud-sdk/core":"1.54.2",
     "@sap/cds": "^7",
     "@sap/cds-hana": "^2",
     "@sap/hdbext": "^7.7.5",

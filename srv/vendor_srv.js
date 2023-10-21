@@ -5,7 +5,8 @@ module.exports = cds.service.impl(function () {
 
         let S4Conn = await cds.connect.to('ZIVN_VENDOR_REG_SRV');
         // ZIVN_VENDOR_REG_SRV/GetCitySet
-        const citydata = await S4Conn.send('GET', '/GetCitySet');
+        const citydata = await S4Conn.send('GET', '/GetCitySet', { 'x-csrf-token': 'fetch' });
+        let a = S4Conn.get.headers;
         // console.log(citydata);
         return citydata;
 
@@ -15,14 +16,14 @@ module.exports = cds.service.impl(function () {
         let S4Conn = await cds.connect.to('ZIVN_VENDOR_REG_SRV');
         // ZIVN_VENDOR_REG_SRV/GetCitySet
         let Payload = req.data;
-        // const citydata = await S4Conn.send('POST', '/GetCitySet', Payload, { "Content-Type": "application/json" });
+        //const citydata = await S4Conn.send('GET', '/$metadata', ;
         // // console.log(citydata);
         // var outRes = citydata;
-
+        cds.env.features.fetch_csrf = true;
         let oImportedCaseDetails =  await S4Conn.send({
             method: 'POST',
-            path: '/$batch',
-            headers: { 'Content-Type': 'multipart/mixed;boundary=batch'},
+            path: '/GetCitySet',
+            headers: { 'Content-Type': 'multipart/mixed;boundary=batch','x-csrf-token': 'RToWlKN-rzEP6Jr7ZUSW0Q=='},
             data:  '--batch\r\n'+
             '\r\n'+
             'Content-Type: multipart/mixed; boundary=changeset\r\n'+
@@ -38,7 +39,8 @@ module.exports = cds.service.impl(function () {
             '\r\n'+
             '--changeset--\r\n'+
             '\r\n'+
-            '--batch--', });
+            '--batch--',
+         });
 
         return oImportedCaseDetails;
 
