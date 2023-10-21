@@ -19,27 +19,29 @@ module.exports = cds.service.impl(function () {
         //const citydata = await S4Conn.send('GET', '/$metadata', ;
         // // console.log(citydata);
         // var outRes = citydata;
-        cds.env.features.fetch_csrf = true;
+       
         let oImportedCaseDetails =  await S4Conn.send({
             method: 'POST',
             path: '/GetCitySet',
-            headers: { 'Content-Type': 'multipart/mixed;boundary=batch','x-csrf-token': 'RToWlKN-rzEP6Jr7ZUSW0Q=='},
-            data:  '--batch\r\n'+
-            '\r\n'+
-            'Content-Type: multipart/mixed; boundary=changeset\r\n'+
-            '\r\n'+
-            '--changeset\r\n'+
-            'Content-Type: application/http\r\n'+
-            'Content-Transfer-Encoding: binary\r\n'+
-            '\r\n'+
-            'POST GetCitySet HTTP/1.1\r\n'+
-            'Content-Type: application/json\r\n'+
-            '\r\n'+
-            '{ "Land1": "BD","Landx": "Bangladesh","Regio": "","Bezer": "","Cityc": "0126","Bezei": "DHAKA"}\r\n'+
-            '\r\n'+
-            '--changeset--\r\n'+
-            '\r\n'+
-            '--batch--',
+            headers: { 'Content-Type': 'application/json'},
+            data:  Payload
+            // headers: { 'Content-Type': 'multipart/mixed;boundary=batch'},
+            // data:  '--batch\r\n'+
+            // '\r\n'+
+            // 'Content-Type: multipart/mixed; boundary=changeset\r\n'+
+            // '\r\n'+
+            // '--changeset\r\n'+
+            // 'Content-Type: application/http\r\n'+
+            // 'Content-Transfer-Encoding: binary\r\n'+
+            // '\r\n'+
+            // 'POST GetCitySet HTTP/1.1\r\n'+
+            // 'Content-Type: application/json\r\n'+
+            // '\r\n'+
+            // '{ "Land1": "BD","Landx": "Bangladesh","Regio": "","Bezer": "","Cityc": "0126","Bezei": "DHAKA"}\r\n'+
+            // '\r\n'+
+            // '--changeset--\r\n'+
+            // '\r\n'+
+            // '--batch--',
          });
 
         return oImportedCaseDetails;
