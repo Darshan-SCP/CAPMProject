@@ -22,10 +22,12 @@ module.exports = cds.service.impl(function () {
     }
   }),
     this.on("GET", "BPTypeSet", async (req) => {
-      var out = await extlib.fetchNorthWindData();
-
+      // var out = await extlib.fetchNorthWindData();
+      var IASConnection = await cds.connect.to('IAS_DEST');
+      const result = await IASConnection.send('POST', '/Users', '', { "Content-Type": "application/scim+json" ,"DataServiceVersion":"2.0"});
+   
       // out.forEach(elm=>delete elm.$metadata );
-      return out
+      return result
       //return datares;
     });
 

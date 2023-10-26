@@ -37,6 +37,13 @@
           "timeout": 100000
         }
       },
+      "IAS_DEST": {
+        "kind": "rest",
+        "credentials": {
+          "destination": "IAS_DEST",
+          "path": "/scim"
+        }
+      },
       "EMAILAPP": {
         "kind": "rest",
         "credentials": {
