@@ -41,7 +41,11 @@
         "kind": "rest",
         "credentials": {
           "destination": "IAS_DEST",
-          "path": "/scim"
+          "path": "/scim",
+          "headers": {
+            "Content-Type": "application/scim+json",
+            "Accept": "*/*"
+          }
         }
       },
       "EMAILAPP": {

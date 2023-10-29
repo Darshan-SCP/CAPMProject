@@ -15,7 +15,7 @@ module.exports = cds.service.impl(function () {
       
             // var out = await extlib.fetchNorthWindData();
             var IASConnection = await cds.connect.to('IAS_DEST');
-            const result = await IASConnection.send('POST', '/Users', '', { "Content-Type": "application/scim+json" ,"DataServiceVersion":"2.0"});
+            const result = await IASConnection.send('GET', '/Users', '',{ "Accept": "*/*", "Content-Type": "application/scim+json" ,"DataServiceVersion":"2.0" }   ) ;
          
             // out.forEach(elm=>delete elm.$metadata );
             return result
