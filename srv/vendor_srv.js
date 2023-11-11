@@ -12,13 +12,13 @@ module.exports = cds.service.impl(function () {
 
     // });
     this.on("GET", "GetCitySet", async (req, res) => {
-      
+       
             // var out = await extlib.fetchNorthWindData();
-            var IASConnection = await cds.connect.to('IAS_DEST');
-            const result = await IASConnection.send('GET', '/Users', '',{ "Accept": "*/*", "Content-Type": "application/scim+json" ,"DataServiceVersion":"2.0" }   ) ;
+            // var IASConnection = await cds.connect.to('IAS_DEST');
+            // const result = await IASConnection.send('GET', '/Users', '',{ "Accept": "*/*", "Content-Type": "application/scim+json" ,"DataServiceVersion":"2.0" }   ) ;
          
-            // out.forEach(elm=>delete elm.$metadata );
-            return result
+            // // out.forEach(elm=>delete elm.$metadata );
+            // return result
             //return datares;
        
         // let S4Conn = await cds.connect.to('ZIVN_VENDOR_REG_SRV');

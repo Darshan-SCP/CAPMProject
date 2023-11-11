@@ -11,6 +11,7 @@ default-*.json
 *.node_modules/
 target/
 #73c452285e9bc727e4a29fd6990bb553a18f605816138cd8cd3c9d1c6730d944 git webhook secrate for cicd
+# 1344e43f4ceb30744c75675fc966c541-00b852fc-6661-498e-8877-be93479bfcb5 infobip key. rgkmpp.api.infobip.com
 # Web IDE, App Studio
 .che/
 *node_modules/
