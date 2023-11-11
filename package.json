@@ -16,9 +16,10 @@
     "@sap/hdi-deploy": "^4.8.2",
     "@sap/xssec": "^3",
     "express": "^4",
-    "hdb": "^0.19.0", 
+    "hdb": "^0.19.0",
     "passport": "^0",
-    "sap-hdbext-promisfied": "^2.202306.2"
+    "sap-hdbext-promisfied": "^2.202306.2",
+    "twilio": "^4.19.0"
   },
   "scripts": {
     "start": "cds-serve"

@@ -1,4 +1,6 @@
-const cds = require('@sap/cds')
+const cds = require('@sap/cds');
+const { error } = require('console');
+const twilio = require('twilio')
 
 module.exports = cds.service.impl(function () {
     // this.on("GET", "GetCitySet", async (req, res) => {
@@ -12,7 +14,22 @@ module.exports = cds.service.impl(function () {
 
     // });
     this.on("GET", "GetCitySet", async (req, res) => {
-       
+        let sid =  'AC6d897b12719036791d16e53a7c66f420';
+        let api_token = '1b969e2944d5dc60f364de3085b47594';
+        const client = twilio(sid,api_token);
+      
+        client.messages.create({
+        body: "Welcome to iVen Solution, collobration is the key",
+        from: "+15707043889",
+        to: "+919328712269"}).then(messages => console.log(messages))
+       .catch(err => console.log(err.messages));
+ 
+       client.messages.create({
+        body: 'Welcome to iVen Solution, collobration is the key',
+        from: 'whatsapp:+14155238886',
+        to: 'whatsapp:+919328712269'
+             }).then(message => console.log(message.sid));
+  
             // var out = await extlib.fetchNorthWindData();
             // var IASConnection = await cds.connect.to('IAS_DEST');
             // const result = await IASConnection.send('GET', '/Users', '',{ "Accept": "*/*", "Content-Type": "application/scim+json" ,"DataServiceVersion":"2.0" }   ) ;
