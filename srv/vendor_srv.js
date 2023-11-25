@@ -15,7 +15,7 @@ module.exports = cds.service.impl(function () {
     // });
     this.on("GET", "GetCitySet", async (req, res) => {
         let sid =  'AC6d897b12719036791d16e53a7c66f420';
-        let api_token = '1b969e2944d5dc60f364de3085b47594';
+        let api_token = 'f6ebd381fed9410e18fd4f56be92f114';
         const client = twilio(sid,api_token);
       
         client.messages.create({
